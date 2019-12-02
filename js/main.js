@@ -47,7 +47,7 @@ $(document).ready(function () {
 
 
 	// LOGO
-	var domElement = document.getElementById("spritesheet");
+	/*var domElement = document.getElementById("spritesheet");
 	TweenMax.spriteSheet(domElement, {
 		width: 2016,
 		offsetX: 0,
@@ -56,7 +56,7 @@ $(document).ready(function () {
 		stepY: 72,
 		count: 840
 	}, 35, { delay: .75, repeat: -1 });
-
+	
 	// SCROLL
 
 	var item2 = $("#item2");
@@ -239,6 +239,7 @@ $(document).ready(function () {
 
 
 	scrollHandler();
+	*/
 
 
 });
