@@ -151,6 +151,15 @@ p a:hover:before {
     visibility: visible;
 }
 
+#professional {
+    visibility: hidden;
+}
+
+#professional:after {
+    content: 'Professional experience';
+    visibility: visible;
+}
+
 #clients {
     visibility: hidden;
 }
