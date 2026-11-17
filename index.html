@@ -4,8 +4,7 @@
 <head>
    <meta charset="utf-8">
    <script>
-      // Classe exclusiva deste site (o Modernizr também usa "js"). Só escondemos
-      // o conteúdo enquanto as animações estiverem realmente disponíveis.
+      // Só escondemos o conteúdo enquanto as animações estiverem disponíveis.
       document.documentElement.classList.add('animating');
       // Rede de segurança: se as animações não iniciarem, o conteúdo aparece mesmo assim.
       setTimeout(function () {
@@ -152,18 +151,7 @@
          </div>
       </div>
    </main>
-   <script src="https://code.jquery.com/jquery-1.4.2.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-   <script src="js/SplitText.min.js"></script>
-   <!--script src="js/TweenSprite.min.js"></script-->
-   <script src="js/plugins.js"></script>
    <script src="js/main.js"></script>
-   <script>
-      // Se alguma biblioteca de animação não carregar, o conteúdo continua visível.
-      if (!window.jQuery || !window.TweenMax || !window.SplitText) {
-         document.documentElement.classList.remove('animating');
-      }
-   </script>
 </body>
 
 </html>

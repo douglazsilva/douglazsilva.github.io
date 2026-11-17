@@ -127,9 +127,42 @@ p a:hover:before {
     width: 100%;
 }
 
-/* Sem JavaScript (ou se as bibliotecas falharem), todo o conteúdo permanece visível. */
+/* Sem JavaScript (ou se as animações falharem), todo o conteúdo permanece visível. */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes logoIn {
+    from { opacity: 0; transform: translateY(24px) scale(.5, .5); }
+    to { opacity: 1; transform: translateY(0) scale(.5, .5); }
+}
+
+@keyframes wordIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animating .wrapper {
+    opacity: 0;
+    animation: fadeIn .4s ease-out .1s forwards;
+}
+
 .animating .itemwrapper {
     opacity: 0;
+    animation: fadeUp .5s ease-out .45s forwards;
+}
+
+.animating .word {
+    display: inline-block;
+    opacity: 0;
+    animation: wordIn .5s ease-out forwards;
+    animation-delay: calc(var(--i) * 50ms);
 }
 
 video {
@@ -195,6 +228,7 @@ p {
     -ms-transform: scale(.5, .5);
     -webkit-transform: scale(.5, .5);
     transform: scale(.5, .5);
+    animation: logoIn .5s ease-out .2s forwards;
 }
 
 #spritesheet {
@@ -223,10 +257,6 @@ p {
     text-rendering: geometricPrecision;
     -webkit-font-smoothing: antialiased;
     margin-bottom: 120px;
-}
-
-.animating .wrapper {
-    opacity: 0;
 }
 
 h1, h2, h3, h4 {
@@ -362,6 +392,26 @@ h1, h2, h3, h4 {
         margin-top: 36px;
         margin-left: 0;
         margin-right: 0;
+    }
+    p {
+        width: 70%;
+        margin-left: 15%;
+        line-height: 22px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animating .wrapper,
+    .animating .itemwrapper,
+    .animating .word {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    .animating .logo {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: scale(.5, .5) !important;
     }
 }
 
