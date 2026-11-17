@@ -41,6 +41,8 @@ $(document).ready(function () {
 	TweenMax.set($("#wrapper"), { alpha: 1, delay: 0.2 });
 	TweenMax.staggerFromTo([intrologo, introitem1, introline, introitem3], .5, { alpha: 0, y: '+=24' }, { alpha: 1, y: '-=24', ease: Sine.easeOut, delay: 0.2 }, 0.2);
 
+	window.siteReady = true;
+
 
 	//TweenMax.fromTo(introline, .5, {scaleX:0, y:'+=24'}, {y:'-=24', scaleX:1, ease:Sine.easeOut, delay:.4});
 

@@ -125,48 +125,11 @@ p a:hover:before {
 
 .itemwrapper {
     width: 100%;
+}
+
+/* Sem JavaScript (ou se as bibliotecas falharem), todo o conteúdo permanece visível. */
+.animating .itemwrapper {
     opacity: 0;
-}
-
-#skills {
-    visibility: hidden;
-}
-
-#skills:after {
-    content: 'Skills';
-    visibility: visible;
-}
-
-#academic:after {
-    content: 'Academic';
-    visibility: visible;
-}
-
-#professional {
-    visibility: hidden;
-}
-
-#professional:after {
-    content: 'Professional experience';
-    visibility: visible;
-}
-
-#clients {
-    visibility: hidden;
-}
-
-#clients:after {
-    content: 'Client experience';
-    visibility: visible;
-}
-
-#awards {
-    visibility: hidden;
-}
-
-#awards:after {
-    content: 'Certifications';
-    visibility: visible;
 }
 
 video {
@@ -221,11 +184,14 @@ p {
     margin-left: 2px;
     margin-top: 112px;
     margin-bottom: 120px;
-    opacity: 0;
     background-color: #262626;
     -ms-transform-origin: 0% 0%;
     -webkit-transform-origin: 0% 0%;
     transform-origin: 0% 0%;
+}
+
+.animating .logo {
+    opacity: 0;
     -ms-transform: scale(.5, .5);
     -webkit-transform: scale(.5, .5);
     transform: scale(.5, .5);
@@ -257,7 +223,33 @@ p {
     text-rendering: geometricPrecision;
     -webkit-font-smoothing: antialiased;
     margin-bottom: 120px;
+}
+
+.animating .wrapper {
     opacity: 0;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    font-weight: normal;
+}
+
+.project {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid #e6e6e6;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+
+.subhead {
+    margin-top: 18px;
+    font-size: 11px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8a8a8a;
 }
 
 .greyed {
@@ -273,6 +265,12 @@ p {
     margin-bottom: 108px;
     font-size: 16px;
     line-height: 30px;
+}
+
+.column.about {
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: 0;
 }
 
 .column-left, .column-right {
@@ -295,18 +293,6 @@ p {
 }
 
 @media only screen and (max-width: 725px) {
-    #clients:after {
-        content: 'Clients';
-        visibility: visible;
-    }
-    #skills:after {
-        content: 'Skills';
-        visibility: visible;
-    }
-    #awards:after {
-        content: 'Awards';
-        visibility: visible;
-    }
     .logo {
         margin-top: 36px;
     }
@@ -343,6 +329,39 @@ p {
         width: 82%;
         font-size: 28px;
         line-height: 40px;
+    }
+}
+
+/* Em telas estreitas as colunas se empilham e a leitura volta a ser linear. */
+@media only screen and (max-width: 725px) {
+    .wrapper {
+        box-sizing: border-box;
+        padding: 0 6%;
+    }
+    .column, .column-left, .column-right {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .column {
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 0;
+        margin-bottom: 64px;
+    }
+    .column.about {
+        font-size: 17px;
+        line-height: 30px;
+    }
+    h1#intro {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .logo {
+        margin-top: 36px;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
