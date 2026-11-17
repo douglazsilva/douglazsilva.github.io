@@ -174,9 +174,9 @@ video:nth-child(4) {
 }
 
 p {
-    /*opacity: 0;*/
     margin-top: 36px;
     margin-bottom: 36px;
+    text-align: center;
 }
 
 .itemwrapper {
@@ -214,7 +214,8 @@ p {
     width: 72px;
     height: 72px;
     /*position:  absolute;*/
-    margin-left: 2px;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 112px;
     margin-bottom: 120px;
     background-color: #262626;
@@ -279,22 +280,25 @@ h1, h2, h3, h4 {
     line-height: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #8a8a8a;
+    color: #6b6b6b;
 }
 
 .greyed {
-    color: #a9a9a9;
+    color: #6b6b6b;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 12px;
 }
 
 .column {
-    width: 85%;
+    width: 70%;
     margin-top: 36px;
     margin-bottom: 108px;
-    font-size: 16px;
-    line-height: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 36px;
+    line-height: 56px;
+    letter-spacing: 2px;
 }
 
 .column.about {
@@ -304,9 +308,11 @@ h1, h2, h3, h4 {
 }
 
 .column-left, .column-right {
-    width: 25%;
+    width: 30%;
     margin-top: 36px;
     margin-bottom: 36px;
+    margin-left: 10%;
+    margin-right: 10%;
     z-index: 999;
 }
 
@@ -320,38 +326,6 @@ h1, h2, h3, h4 {
 
 .column-right:nth-child(6) {
     margin-bottom: 128px;
-}
-
-@media only screen and (max-width: 725px) {
-    .logo {
-        margin-top: 36px;
-    }
-    p {
-        width: 70%;
-        margin-left: 15%;
-        line-height: 22px;
-    }
-}
-
-@media only screen and (max-width: 4000px) {
-    .column, .column-left, .column-right, .logo {
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-    p {
-        text-align: center;
-    }
-    .column-left, .column-right {
-        width: 30%;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-    .column {
-        width: 70%;
-        font-size: 36px;
-        line-height: 56px;
-        letter-spacing: 2px;
-    }
 }
 
 @media only screen and (max-width: 800px) {
