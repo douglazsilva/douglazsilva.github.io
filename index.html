@@ -3,112 +3,167 @@
 
 <head>
    <meta charset="utf-8">
+   <script>
+      // Classe exclusiva deste site (o Modernizr também usa "js"). Só escondemos
+      // o conteúdo enquanto as animações estiverem realmente disponíveis.
+      document.documentElement.classList.add('animating');
+      // Rede de segurança: se as animações não iniciarem, o conteúdo aparece mesmo assim.
+      setTimeout(function () {
+         if (!window.siteReady) {
+            document.documentElement.classList.remove('animating');
+         }
+      }, 2500);
+   </script>
    <title>Douglaz Silva</title>
    <link rel="icon" href="favicon.ico?v=2" />
-   <meta name="description" content="">
-   <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+   <meta name="description" content="Software Developer | Java &amp; Kotlin | Backend, Full Stack &amp; Mobile | Android | Spring Boot | Angular.">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="apple-touch-icon" href="apple-touch-icon.png">
    <link rel="stylesheet" href="css/normalize.min.css">
    <link rel="stylesheet" href="css/main.css">
    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-   <!-- Global site tag (gtag.js) - Google Analytics -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148784609-1"></script>
+   <!-- Google Analytics 4: substitua G-XXXXXXXXXX pelo seu ID de medição e descomente o bloco abaixo. -->
+   <!--
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-      gtag('config', 'UA-148784609-1');
+      gtag('config', 'G-XXXXXXXXXX');
    </script>
+   -->
 </head>
 
 <body>
-   <div class='wrapper-container'>
+   <main class='wrapper-container'>
       <div class='wrapper' id='wrapper'>
          <div class="logo" id="logo">
-            <img src="https://raw.githubusercontent.com/douglazsilva/douglazsilva.github.io/master/img/ds_logo.png"
-               alt="logo">
+            <img src="img/ds_logo.png" alt="Logo Douglaz Silva">
          </div>
-         <div id='intro' class='column'>Tech lover, Java, Web and Mobile Developer.</div>
+         <h1 id='intro' class='column'>Software Developer | Java &amp; Kotlin | Backend, Full Stack &amp; Mobile | Android | Spring Boot | Angular.</h1>
          <div class='itemwrapper' id='item0'>
-            <div id='col1' class='column-left'>
-               <span class='greyed'>Network</span><br>
+            <div class='column about'>
+               <h2 class='greyed'>About</h2>
                &zwnj;<br>
+               Desenvolvedor de software com experiência na concepção e entrega de aplicações robustas no Backend, Web e Mobile. Atuei no desenvolvimento de microsserviços escaláveis, modernização de arquiteturas de sistemas e criação de ecossistemas nativos e cross-platform.
+            </div>
+            <div id='col1' class='column-left'>
+               <h2 class='greyed'>Network</h2>
+               &zwnj;<br>
+               Teresina, Piauí, Brasil<br>
                <a href="mailto:fdcsone@hotmail.com" target="_top">fdcsone@hotmail.com</a><br>
-               <a href="https://github.com/douglazsilva" target="_blank">Github</a><br>
-               <a href="https://www.linkedin.com/in/douglazsilva" target="_blank">Linkedin</a><br>
+               <a href="https://github.com/douglazsilva" target="_blank" rel="noopener noreferrer">Github</a><br>
+               <a href="https://www.linkedin.com/in/douglazsilva" target="_blank" rel="noopener noreferrer">Linkedin</a><br>
+            </div>
+            <div id='col4' class='column-right'>
+               <h2 class='greyed' id='professional'>Professional experience</h2>
+               &zwnj;<br>
+               Android Developer - PDVPlus · Autônomo (2019 - atual)<br>
+               Professor do Ensino Profissional e Tecnológico - SEDUC-PI (2025 - 2026)<br>
+               Software Engineer - CESAR (2021 - 2023)<br>
+               Full Stack Developer - Meta (2021)<br>
+               Desenvolvedor - Rich Publicidade (2020 - 2021)<br>
+            </div>
+            <div id='col7' class='column-left'>
+               <h2 class='greyed'>Projects</h2>
+               &zwnj;<br>
+               <h3 class='project'><a href="https://marmitechlab.github.io" target="_blank" rel="noopener noreferrer">MarmitechLab</a> - Catálogo de educação tecnológica voluntária</h3>
+               <h4 class='subhead'>Kotlin &amp; Compose</h4>
+               Horizonte - teste vocacional que sugere carreiras compatíveis com o perfil<br>
+               Memotiva - bem-estar com frases diárias, favoritos e notificações<br>
+               MyPTT - comunicação Push-to-Talk com servidor WebSocket<br>
+               PerifDig - controle remoto do computador pelo celular via Wi-Fi ou Bluetooth<br>
+               Participai - enquetes em tempo real com painel Angular e app Android<br>
+               RasgaSeda - rede social gamificada de elogios com moderação por IA<br>
+               RecebaAi - gestão de clientes e cobranças com WhatsApp e PIX<br>
+               Domesario - eleições digitais com validação de eleitor por QR Code<br>
+               StudentVoice - coleta de feedback acadêmico em tempo real<br>
+               <h4 class='subhead'>Java &amp; XML</h4>
+               Urna Eletrônica - simulação da urna eletrônica brasileira<br>
+               <h3 class='project'><a href="https://aidtecnologia.github.io" target="_blank" rel="noopener noreferrer">AID Tecnologia</a> - Estúdio de desenvolvimento de software</h3>
+               <h4 class='subhead'>Web</h4>
+               Geraki - avaliações alinhadas à BNCC com geração de questões por IA<br>
+               TiraVoz - separação de voz e instrumental de músicas<br>
+               Galeria de Cadernos - feed de atividades, tarefas e correção<br>
+               Marcenaria Rústica - catálogo, painel administrativo e app Android<br>
+               A gente se Resolve - gestão de eventos com inscrições e confirmação<br>
+               PDVPlus - frente de caixa e retaguarda para varejo<br>
+               ComandaPlus - comandas e gestão para bares e restaurantes<br>
+               <h4 class='subhead'>Mobile</h4>
+               TaMarcado - correção de cartão-resposta pela câmera<br>
+               BabyJourney - diário do bebê com mamadas, sono e atividades<br>
+               QuestãoAki - simulados por tema para concursos públicos<br>
+               ListAki - listas de compras com funcionamento offline<br>
+               A gente se Resolve App - palestras em vídeo, áudio e PDF<br>
+               PDVPlus Mobile - vendas, pagamentos e impressão Bluetooth<br>
+               ComandaPlus Mobile - mesas, pedidos e fechamento de conta<br>
+               <h4 class='subhead'>IA</h4>
+               Object Identifier - bot de WhatsApp que identifica produtos por foto<br>
+               <h4 class='subhead'>Jogos</h4>
+               Brother Fighter - jogo de luta para navegador em Three.js<br>
             </div>
             <div id='col2' class='column-right'>
-               <span class='greyed' id='academic'></span><br>
+               <h2 class='greyed'>Education &amp; Certifications</h2>
                &zwnj;<br>
-               Análise e Desenvolvimento de Sistemas (AESPI)<br>
-               Pós-graduação Lato Sensu - Especialização, Tecnologia Inovação e Inteligência (CESAR School)
-            </div>
-            <div id='col3' class='column-right'>
-               <span class='greyed'>Certifications</span><br>
-               &zwnj;<br>
-               Scrum Fundamentals Certified (SFC™)<br>
-            </div>
-            <div id='col4' class='column-left'>
-               <span class='greyed' id='professional'></span><br>
-               &zwnj;<br>
-               Developer - Rich Publicidade (2020 - 2021)<br>
-               Full Stack Developer - Meta (2021)<br>
-               Software Engineer - CESAR (2021 - 2023)<br>
-            </div>
-            <div id='col5' class='column-right'>
-               <span class='greyed'>Courses</span><br>
-               &zwnj;<br>
+               <h3 class='subhead'>Education</h3>
+               Análise e Desenvolvimento de Sistemas - Associação de Ensino Superior do Piauí (2016 - 2017)<br>
+               Pós-graduação Lato Sensu - Especialização, Tecnologia Inovação e Inteligência - CESAR School (2022 - 2023)<br>
+               <h3 class='subhead'>Certifications</h3>
+               Fundamentos em Cibersegurança - IBSEC (2023)<br>
+               Scrum Fundamentals Certified (SFC™) - VMEdu (2017, expired 2020)<br>
+               <h3 class='subhead'>Courses</h3>
                Fundamentos de Gestão de TI (FGV)<br>
                Secure Software Development (Pluralsight)<br>
                Avaliação de Usabilidade (Lumina - UFRGS)<br>
             </div>
-            <div id='col6' class='column-left'>
-               <span class='greyed' id='clients'></span><br>
+            <div id='col8' class='column-left'>
+               <h2 class='greyed' id='skills'>Skills</h2>
+               &zwnj;<br>
+               <h3 class='subhead'>Languages</h3>
+               Java, Kotlin, Python, JavaScript, TypeScript<br>
+               <h3 class='subhead'>Mobile</h3>
+               Android, Jetpack Compose, Flutter, React Native, .NET MAUI<br>
+               <h3 class='subhead'>Web</h3>
+               Angular, Angular Material, React<br>
+               <h3 class='subhead'>Backend &amp; Data</h3>
+               Spring Boot, Microsserviços, API REST, Firebase, SQL, PostgreSQL, MongoDB, NoSQL<br>
+               <h3 class='subhead'>Tools &amp; Other</h3>
+               Docker, CI/CD, Apache Kafka, Git, User Experience<br>
+            </div>
+            <div id='col6' class='column-right'>
+               <h2 class='greyed' id='clients'>Client experience</h2>
                &zwnj;<br>
                JK Atacado<br>
                Rei do Tênis<br>
                Atacado da Moda THE<br>
                Benção Fashion<br>
                Neves Comunicação Visual<br>
-               Lisbelle Biju & Make<br>
+               Lisbelle Biju &amp; Make<br>
+               Versátil<br>
+               Elias Barbearia<br>
             </div>
-            <div id='col7' class='column-right'>
-               <span class='greyed'>Projects Experience</span><br>
+            <div id='col9' class='column-left'>
+               <h2 class='greyed' id='awards'>Recognitions</h2>
                &zwnj;<br>
-               PDVPlus<br>
-               PDVPlus Mobile<br>
-               ComandaPlus<br>
-               ComandaPlus Mobile<br>
-               A gente se resolve<br>
-            </div>
-            <div id='col8' class='column-left'>
-               <span class='greyed' id='skills'></span><br>
-               &zwnj;<br>
-               Java<br>
-               Kotlin<br>
-               Android<br>
-               Firebase<br>
-               SQL<br>
-               NoSQL<br>
-               Git<br>
-               JavaScript<br>
-               TypeScript<br>
-               Angular<br>
-               React<br>
-               Flutter<br>
-               Spring<br>
-               User Experience<br>
+               Professor Orientador - Programa Do Piauí para o Mundo 2026 - SEDUC-PI (2026)<br>
+               <a href="https://github.com/douglazsilva/NossasEmocoes" target="_blank" rel="noopener noreferrer">Nossas Emoções</a> - Kotlin, Jetpack Compose e Inteligência Artificial
             </div>
 
          </div>
       </div>
-   </div>
+   </main>
    <script src="https://code.jquery.com/jquery-1.4.2.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
    <script src="js/SplitText.min.js"></script>
    <!--script src="js/TweenSprite.min.js"></script-->
    <script src="js/plugins.js"></script>
    <script src="js/main.js"></script>
+   <script>
+      // Se alguma biblioteca de animação não carregar, o conteúdo continua visível.
+      if (!window.jQuery || !window.TweenMax || !window.SplitText) {
+         document.documentElement.classList.remove('animating');
+      }
+   </script>
 </body>
 
 </html>
