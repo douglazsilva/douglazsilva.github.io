@@ -31,9 +31,9 @@ python3 -m http.server 8000
 
 Qualquer push em `master` dispara o deploy automático do GitHub Pages. O workflow em `.github/workflows/validate.yml` valida o HTML antes de cada push/PR.
 
-## Google Analytics
+## Google Tag Manager
 
-O HTML contém um bloco comentado com o placeholder `G-XXXXXXXXXX`. Para ativar, crie uma propriedade **GA4** em analytics.google.com, adicione o fluxo `https://douglazsilva.github.io/`, copie o ID de medição e substitua o placeholder no `<head>` de `index.html`.
+O container `GTM-53BNSV83` está instalado no `<head>` de `index.html`, com o fallback `<noscript>` logo após `<body>`. As tags de medição (por exemplo, GA4) devem ser configuradas dentro do próprio Google Tag Manager — o snippet do site apenas carrega o container.
 
 ## Créditos
 
