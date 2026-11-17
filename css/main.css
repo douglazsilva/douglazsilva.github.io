@@ -288,6 +288,7 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 12px;
+    margin-bottom: 24px;
 }
 
 .column {
