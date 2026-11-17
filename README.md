@@ -33,7 +33,7 @@ Qualquer push em `master` dispara o deploy automático do GitHub Pages. O workfl
 
 ## Google Tag Manager
 
-O container `GTM-53BNSV83` está instalado no `<head>` de `index.html`, com o fallback `<noscript>` logo após `<body>`. As tags de medição (por exemplo, GA4) devem ser configuradas dentro do próprio Google Tag Manager — o snippet do site apenas carrega o container.
+O container `GTM-53BNSV83` está instalado no `<head>` de `index.html`, com o fallback `<noscript>` logo após `<body>`. O container já possui uma tag GA4 publicada (`G-6CWTXSC5ZW`), que envia um `page_view` a cada carregamento. Não é necessário alterar o código do site para medir acessos — alterações de tags são feitas apenas no painel do GTM.
 
 ## Créditos
 
